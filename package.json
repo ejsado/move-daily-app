@@ -1,0 +1,21 @@
+{
+  "name": "workout-log",
+  "version": "1.0.0",
+  "description": "customizable workout log",
+  "main": "index.html",
+  "dependencies": {
+    "angular": "^1.5.3",
+    "angular-animate": "^1.5.3",
+    "angular-aria": "^1.5.3",
+    "angular-material": "^1.0.6",
+    "angular-messages": "^1.5.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eric Sadowski",
+  "license": "ISC"
+}
