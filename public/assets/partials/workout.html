@@ -1,0 +1,30 @@
+<section>
+	<form name="chooseWorkout">
+		<md-datepicker required
+			ng-model="workoutUtils.dateOfWorkout"
+			md-max-date="appUtils.todaysDate" >
+		</md-datepicker>
+
+		<md-input-container>
+			<label>Choose Routine or Exercise</label>
+			<md-select required
+				ng-model="workoutUtils.selectedWorkoutId">
+				<md-optgroup label="Routines">
+					<md-option ng-value="routine.id" ng-repeat="routine in appUtils.workout.data.routines">
+						{{ routine.name }}
+					</md-option>
+				</md-optgroup>
+				<md-optgroup label="Exercises">
+					<md-option ng-value="exercise.id" ng-repeat="exercise in appUtils.workout.data.exercises">
+						{{ exercise.name }}
+					</md-option>
+				</md-optgroup>
+			</md-select>
+		</md-input-container>
+
+		<md-button class="md-raised md-primary"
+			ng-click="workoutUtils.createWorkout()">
+			Let's go!
+		</md-button>
+	</form>
+</section>

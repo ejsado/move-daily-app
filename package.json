@@ -1,5 +1,5 @@
 {
-  "name": "workout-log",
+  "name": "move-daily-app",
   "version": "1.0.0",
   "description": "customizable workout log",
   "main": "index.html",
@@ -11,11 +11,17 @@
     "angular-messages": "^1.5.3"
   },
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-sass": "^2.3.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Eric Sadowski",
+  "repository" : {
+	"type" : "git",
+	"url" : "https://github.com/npm/npm.git"
+  }
   "license": "ISC"
 }

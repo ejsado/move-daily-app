@@ -1,0 +1,23 @@
+/* my additional css */
+.entry-indicator-container {
+  position: absolute;
+  top: 60%;
+  width: 44px;
+  text-align: center;
+  pointer-events: none;
+}
+
+.entry-color-indicator {
+  display: inline-block;
+  border-radius: 50%;
+  height: 5px;
+  width: 5px;
+  margin: 2px;
+  box-shadow: 0 0 3px #FFF;
+}
+
+.entry-on-selected-date .entry-color-indicator {
+  height: 8px;
+  width: 8px;
+  margin: 0 5px 0 0;
+}

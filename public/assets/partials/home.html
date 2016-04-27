@@ -1,0 +1,28 @@
+<section>
+	<md-calendar id="log-calendar"
+		ng-model="homeUtils.selectedDate"
+		md-max-date="appUtils.todaysDate" 
+		md-min-date="appUtils.profile.user.firstLoginDate"
+		ng-change="homeUtils.getWorkoutsOnSelectedDate()">
+	</md-calendar>
+</section>
+<section>
+	<h3 class="md-title">
+		{{ homeUtils.selectedDate | date:'fullDate' }}
+	</h3>
+	<p ng-show="homeUtils.entriesOnSelectedDate.length == 0">
+		No entries on this date.
+	</p>
+	<p class="entry-on-selected-date"
+		ng-repeat="entry in homeUtils.entriesOnSelectedDate">
+		<span class="entry-color-indicator"
+			ng-style="{backgroundColor: entry.color}"></span>
+		{{ entry.text }}
+	</p>
+</section>
+<section>
+	<md-button class="md-raised md-primary"
+		ng-click="appUtils.goToState('app.workout')">
+		Log a Workout
+	</md-button>
+</section>

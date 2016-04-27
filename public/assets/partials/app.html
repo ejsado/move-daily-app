@@ -1,0 +1,53 @@
+<md-sidenav id="app-menu"
+	md-component-id="appMenu"
+	md-is-locked-open="$mdMedia('gt-sm')"
+	md-whiteframe="1">
+	<header layout-padding>
+		<div layout="row" layout-align="end start">
+			<div>
+				<a ui-sref="app.settings" ui-sref-active-eq="md-accent" ng-click="appUtils.closeAppMenu()">
+					<i class="material-icons">
+						settings
+					</i>
+				</a>
+			</div>
+		</div>
+		<div>
+			<i class="material-icons">person</i>
+		</div>
+		<div>
+			Hi, {{ appUtils.profile.user.firstName }}
+		</div>
+	</header>
+	<nav layout="column">
+		<div>
+			<a ui-sref="app" ui-sref-active-eq="md-accent" ng-click="appUtils.closeAppMenu()">
+				Home
+			</a>
+		</div>
+		<div>
+			<a ui-sref="app.workout" ui-sref-active="md-accent" ng-click="appUtils.closeAppMenu()">
+				Log a Workout
+			</a>
+		</div>
+	</nav>
+</md-sidenav>
+<div layout="column" flex>
+	<md-toolbar>
+		<div class="md-toolbar-tools">
+			<md-button ng-click="appUtils.openAppMenu()" class="md-icon-button" aria-label="Menu" hide-gt-sm>
+				<md-icon>
+					menu
+				</md-icon>
+			</md-button>
+			<h2>
+				{{ appUtils.getToolbarTitle(); }}
+			</h2>
+		</div>
+	</md-toolbar>
+	<md-content>
+		<div ui-view="appContent" id="app-content">
+			<!-- content will be replaced -->
+		</div>
+	</md-content>
+</div>
